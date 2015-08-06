@@ -16,19 +16,14 @@ public class CaptainNow extends Activity {
     ImageButton lookAtMe;
     MediaPlayer lookPlayer;
 
-    ImageButton iAmCaptain;
-    MediaPlayer captainPlayer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_captain);
 
         lookAtMe = (ImageButton)findViewById(R.id.look);
-        iAmCaptain = (ImageButton)findViewById(R.id.captain_now);
 
         lookPlayer = MediaPlayer.create(this, R.raw.look);
-        captainPlayer = MediaPlayer.create(this, R.raw.captain);
 
         lookAtMe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,19 +32,6 @@ public class CaptainNow extends Activity {
                     lookPlayer.stop();
                     lookPlayer.prepare();
                     lookPlayer.start();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        iAmCaptain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    captainPlayer.stop();
-                    captainPlayer.prepare();
-                    captainPlayer.start();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

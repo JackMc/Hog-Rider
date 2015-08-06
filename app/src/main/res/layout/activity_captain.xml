@@ -10,14 +10,7 @@
     tools:context=".CaptainNow">
     <ImageButton
         android:layout_width="match_parent"
-        android:layout_height="0dip"
+        android:layout_height="match_parent"
         android:id="@+id/look"
-        android:layout_weight="1"
         android:src="@drawable/look" />
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="0dip"
-        android:id="@+id/captain_now"
-        android:layout_weight="1"
-        android:src="@drawable/captain" />
 </LinearLayout>
